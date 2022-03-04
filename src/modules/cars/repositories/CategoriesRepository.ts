@@ -25,8 +25,7 @@ class CategoriesRepository implements ICategoriesRepository{
   }
 
   findByName(name: String): Category {
-    return this.categories.find(category => category.name === name);
-    
+    return this.categories.find(category => category.name === name);    
   }
 }
 
