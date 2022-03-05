@@ -8,7 +8,7 @@ interface IImportCategory {
   description: String;
 }
 
-class ImportCategoryuseCase {
+class ImportCategoryUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) { }
 
   loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
@@ -57,4 +57,4 @@ class ImportCategoryuseCase {
   }
 }
 
-export { ImportCategoryuseCase }
+export { ImportCategoryUseCase }
