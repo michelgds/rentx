@@ -1,7 +1,8 @@
-import { Category } from "../model/Category";
-import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository";
+import { Category } from "../../model/Category";
+import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository";
 
-class CategoriesRepository implements ICategoriesRepository{
+
+class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
   private static INSTANCE: CategoriesRepository;
@@ -11,7 +12,7 @@ class CategoriesRepository implements ICategoriesRepository{
   }
 
   public static getInstance(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE){
+    if (!CategoriesRepository.INSTANCE) {
       CategoriesRepository.INSTANCE = new CategoriesRepository();
     }
 
@@ -35,7 +36,7 @@ class CategoriesRepository implements ICategoriesRepository{
   }
 
   findByName(name: String): Category {
-    return this.categories.find(category => category.name === name);    
+    return this.categories.find(category => category.name === name);
   }
 }
 
