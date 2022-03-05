@@ -22,7 +22,6 @@ class SpecificationsRepository implements ISpecificationRepository {
   
   findByName(name: String): Specification {
     return this.specifications.find(specification => specification.name === name);
-
   }
 }
 
