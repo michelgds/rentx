@@ -2,23 +2,12 @@ import { Category } from "../../entities/Category";
 import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository";
 import { Repository, getRepository } from "typeorm";
 
-
 class CategoriesRepository implements ICategoriesRepository {
-
-  private static INSTANCE: CategoriesRepository;
 
   private repository: Repository<Category>;
 
-  private constructor() {
+  constructor() {
     this.repository = getRepository(Category);
-  }
-
-  public static getInstance(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE) {
-      CategoriesRepository.INSTANCE = new CategoriesRepository();
-    }
-
-    return CategoriesRepository.INSTANCE;
   }
 
   async create({ description, name }: ICreateCategoryDTO): Promise<void> {

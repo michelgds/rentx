@@ -13,7 +13,7 @@ class Category {
   description: String;
 
   @CreateDateColumn()
-  createdAt: Date;
+  created_at: Date;
 
   constructor() {
     if (!this.id) {
