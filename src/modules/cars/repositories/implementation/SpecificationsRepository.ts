@@ -1,9 +1,9 @@
 
 import { Specification } from "../../entities/Specification";
-import { ISpecificationRepository, ICreateSpecificationDTO } from "../ISpecificationsRepository";
+import { ISpecificationsRepository, ICreateSpecificationDTO } from "../ISpecificationsRepository";
 
 
-class SpecificationsRepository implements ISpecificationRepository {
+class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[];
 
   private static INSTANCE: SpecificationsRepository;
