@@ -3,8 +3,8 @@ import { injectable, inject } from "tsyringe";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 interface IRequest {
-  name: String;
-  description: String;
+  name: string;
+  description: string;
 }
 
 @injectable()

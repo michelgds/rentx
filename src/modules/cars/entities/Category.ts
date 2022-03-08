@@ -4,13 +4,13 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn } from "typeorm";
 @Entity("categories")
 class Category {
   @PrimaryColumn()
-  id?: String;
+  id?: string;
 
   @Column()
-  name: String;
+  name: string;
 
   @Column()
-  description: String;
+  description: string;
 
   @CreateDateColumn()
   created_at: Date;

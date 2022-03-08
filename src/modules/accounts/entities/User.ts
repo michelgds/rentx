@@ -4,22 +4,22 @@ import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
 @Entity("users")
 class User {
   @PrimaryColumn()
-  id?: String;
+  id?: string;
 
   @Column()
-  name: String;
-  
-  @Column()
-  email: String;
+  name: string;
 
   @Column()
-  password: String;
+  email: string;
 
   @Column()
-  driver_licence: String;
+  password: string;
 
   @Column()
-  isAdmin: Boolean;
+  driver_licence: string;
+
+  @Column()
+  isAdmin: boolean;
 
   @CreateDateColumn()
   created_at: Date;

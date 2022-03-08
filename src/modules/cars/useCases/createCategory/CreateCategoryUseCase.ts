@@ -3,8 +3,8 @@ import { inject, injectable } from "tsyringe";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
-  name: String;
-  description: String;
+  name: string;
+  description: string;
 }
 @injectable()
 class CreateCategoryUseCase {

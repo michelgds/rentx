@@ -5,8 +5,8 @@ import fs from 'fs';
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 
 interface IImportCategory {
-  name: String;
-  description: String;
+  name: string;
+  description: string;
 }
 @injectable()
 class ImportCategoryUseCase {
