@@ -8,10 +8,7 @@ class User {
 
   @Column()
   name: String;
-
-  @Column()
-  username: String;
-
+  
   @Column()
   email: String;
 
