@@ -4,7 +4,7 @@ import { Category } from "../../entities/Category";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 
-injectable()
+@injectable()
 class ListCategoriesUseCase {
 
   constructor(
