@@ -80,7 +80,7 @@
     "/specifications": {
       "post": {
         "tags": [
-          "Specifications"
+          "Specification"
         ],
         "summary": "Creates a speciication",
         "description": "Create a new specification",
@@ -99,6 +99,36 @@
           },
           "500":{
             "description":"Specification already exists"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Specification"
+        ],
+        "summary": "List all specifications",
+        "description": "List all specifications",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
