@@ -1,5 +1,5 @@
 import { ICategoriesRepository } from "../ICategoriesRepository";
-import { Category } from "../../entities/Category";
+import { Category } from "@modules/cars/entities/Category";
 
 class CategoriesRepositoryInMemory implements ICategoriesRepository {
 
