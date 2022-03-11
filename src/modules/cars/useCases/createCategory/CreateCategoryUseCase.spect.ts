@@ -1,4 +1,0 @@
-describe("Criar categoria" () => {
-  
-  it("");
-});
