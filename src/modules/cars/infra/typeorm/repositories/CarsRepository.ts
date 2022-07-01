@@ -14,6 +14,7 @@ class CarRepository implements ICarsRepository {
         brand,
         category_id,
         daily_rate,
+        fine_amount,
         description,
         name,
         licence_plate
@@ -21,6 +22,7 @@ class CarRepository implements ICarsRepository {
         const car = this.repository.create({
             brand,
             category_id,
+            fine_amount,
             daily_rate,
             description,
             name,
