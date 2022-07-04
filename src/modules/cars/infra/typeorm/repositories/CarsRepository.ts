@@ -14,6 +14,7 @@ class CarRepository implements ICarsRepository {
         brand,
         category_id,
         daily_rate,
+        fine_amount,
         description,
         name,
         licence_plate
@@ -22,6 +23,7 @@ class CarRepository implements ICarsRepository {
             brand,
             category_id,
             daily_rate,
+            fine_amount,
             description,
             name,
             licence_plate

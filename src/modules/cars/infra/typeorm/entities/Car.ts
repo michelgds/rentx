@@ -31,6 +31,9 @@ class Car {
     @Column()
     category_id: string;
 
+    @Column()
+    fine_amount: number;
+
     @CreateDateColumn()
     created_at: Date;
 
