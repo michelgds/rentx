@@ -7,20 +7,24 @@ class CarsRepositoryInMemory implements ICarsRepository {
     cars: Car[] = [];
     
     async create({
+        id,
         brand,
         category_id,
         daily_rate,
         description,
+        fine_amount,
         name,
         licence_plate
     }: ICreateCarDTO): Promise<Car> {
         const car = new Car();
         
         Object.assign(car, {
+            id,
             brand,
             category_id,
             daily_rate,
             description,
+            fine_amount,
             name,
             licence_plate
         });
