@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
-import { Rental } from "../infra/typeorm/entities/Rental";
-import { IRentalsRepository } from "./IRentalsRepository";
+import { Rental } from "../entities/Rental";
+import { IRentalsRepository } from "../../../repositories/IRentalsRepository";
 
 class RentalsRepository implements IRentalsRepository {
     private repository: Repository<Rental>;
