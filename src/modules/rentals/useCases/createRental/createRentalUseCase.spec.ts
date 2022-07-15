@@ -1,4 +1,5 @@
 import { AppError } from "@errors/AppError";
+import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
 import { RentalsRepositoryInMemory } from "@modules/rentals/repositories/in-memory/RentalsRepositoryInMemory";
 import { DayjsDateProvider } from "@shared/container/providers/DateProvider/implementations/DayjsDateProvider";
 import dayjs from "dayjs";
@@ -6,6 +7,7 @@ import { CreateRentalUseCase } from "./createRentalUseCase";
 
 let createRentalUseCase: CreateRentalUseCase;
 let rentalsRepositoryInMemory: RentalsRepositoryInMemory;
+let carsRepositoryInMemory: CarsRepositoryInMemory;
 let dayjsDateProvider: DayjsDateProvider;
 
 describe("Create rental", () => {
@@ -13,8 +15,13 @@ describe("Create rental", () => {
 
     beforeEach(() => {
         rentalsRepositoryInMemory = new RentalsRepositoryInMemory();
+        carsRepositoryInMemory = new CarsRepositoryInMemory();
         dayjsDateProvider = new DayjsDateProvider();
-        createRentalUseCase = new CreateRentalUseCase(rentalsRepositoryInMemory, dayjsDateProvider);
+        createRentalUseCase = new CreateRentalUseCase(
+            rentalsRepositoryInMemory, 
+            dayjsDateProvider, 
+            carsRepositoryInMemory
+        )
     });
 
     it("should be able to create a new rental", async () => {
@@ -46,7 +53,7 @@ describe("Create rental", () => {
     it("should not be able to create a new rental if there is already an open rental for that car", async () => {
         expect(async () => {
             await createRentalUseCase.execute({
-                user_id: "123",
+                user_id: "12345",
                 car_id: "teste",
                 expected_return_date: dayAdd24Hours
             });
