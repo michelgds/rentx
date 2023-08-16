@@ -1,0 +1,335 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2023-08-16T22:11:44.192Z",
+    "__export_source": "insomnia.desktop.app:v2023.5.3",
+    "resources": [
+        {
+            "_id": "req_1483923ca5f5468ca492a70551e1178f",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692223354839,
+            "created": 1692220644107,
+            "url": "{{ _.base_url }}/users",
+            "name": "/users",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"Michel Gracia\",\n\t\"email\": \"michel@mail.com\",\n\t\"password\": \"123456\",\n\t\"driver_licence\": \"789456\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1692223076965.75,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "parentId": null,
+            "modified": 1692220600326,
+            "created": 1692220600327,
+            "name": "Rentx",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_f3481246859b4a72a98c512cf371cc84",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692221623074,
+            "created": 1692221334839,
+            "url": "{{ _.base_url }}/categories",
+            "name": "/categories",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"seda-medio\",\n\t\"description\": \"Categoria sedã médio\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221334839,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_87ce47389c9b4639b01d7cb80eab8a36",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692222270078,
+            "created": 1692222257113,
+            "url": "{{ _.base_url }}/categories",
+            "name": "/categories",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221242834,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_254849814d13474c88faffcab9a6ef66",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692222384102,
+            "created": 1692222325203,
+            "url": "{{ _.base_url }}/specifications",
+            "name": "/specifications",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"cambio-automatico\",\n\t\"description\": \"Câmbio automático padrão\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221288836.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_13b6216e3e1c4a9887a707bd8247768b",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692222411604,
+            "created": 1692222407055,
+            "url": "{{ _.base_url }}/specifications",
+            "name": "/specifications",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221265835.25,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_7028f066b8b440fea666f5cbf0f0eb4d",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692223153780,
+            "created": 1692222450203,
+            "url": "{{ _.base_url }}/cars",
+            "name": "/cars",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"Civic\",\n\t\"description\": \"Honda Civic\",\n\t\"daily_rate\": \"120.00\",\n\t\"licence_plate\": \"ABC-0234\",\n\t\"fine_amount\": \"20.00\",\n\t\"brand\": \"Honda\",\n\t\"category_id\": \"87269c1e-d6c8-4e97-adc7-197b708ad0b7\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221257209.7812,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_fd264c5b8a294e64b8515ff71043fd60",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692223043856,
+            "created": 1692222749332,
+            "url": "{{ _.base_url }}/cars/specifications/52c09e95-b939-47e4-9f9c-8e86db2a6913",
+            "name": "/cars/specifications/:car_id",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"specifications_id\": \"890998fd-e2da-4aaa-ab75-09475507a0c9\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221248584.3125,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_e1fc225aadf14edd949482d04d650fd7",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692223177388,
+            "created": 1692223116614,
+            "url": "{{ _.base_url }}/cars/available",
+            "name": "/cars/available",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "{{ _.token_michel }}"
+            },
+            "metaSortKey": -1692221255053.414,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_d377ebaac88a40e7f2544c56d94d639e53364431",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692221282230,
+            "created": 1692220600330,
+            "name": "Base Environment",
+            "data": {
+                "base_url": "localhost:3333",
+                "token_michel": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTIyMjEyNDksImV4cCI6MTY5MjMwNzY0OSwic3ViIjoiYWZlMjQyODYtOWFjZS00MGFhLWIzMTAtNGRjZWZiN2NmYjU5In0.Fyp5cXK_mqiJagjOH6EPwo7wEjcW_pe063k2UKCcwqo"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url",
+                    "token_michel"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1692220600330,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_d377ebaac88a40e7f2544c56d94d639e53364431",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692220600335,
+            "created": 1692220600335,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
