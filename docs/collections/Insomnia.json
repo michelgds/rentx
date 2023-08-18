@@ -1,8 +1,8 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2023-08-16T22:11:44.192Z",
-    "__export_source": "insomnia.desktop.app:v2023.5.3",
+    "__export_date": "2023-08-18T13:52:35.033Z",
+    "__export_source": "insomnia.desktop.app:v2023.5.4",
     "resources": [
         {
             "_id": "req_1483923ca5f5468ca492a70551e1178f",
@@ -302,14 +302,88 @@
             "_type": "request"
         },
         {
+            "_id": "req_96ac1baaccd0444586e035332ee6c59f",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692366656682,
+            "created": 1692366341130,
+            "url": "{{ _.base_url }}/rentals",
+            "name": "/rentals",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"car_id\": \"52c09e95-b939-47e4-9f9c-8e86db2a6913\",\n\t\"expected_return_date\": \"2023-08-20\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.4"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "prefix": "Bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTIzNjY1MjcsImV4cCI6MTY5MjQ1MjkyNywic3ViIjoiYWZlMjQyODYtOWFjZS00MGFhLWIzMTAtNGRjZWZiN2NmYjU5In0.wgguuK1FbN1wt8DAU9fqPpL5LyFKabIw9tInwvoe7o0"
+            },
+            "metaSortKey": -1692366341130,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_29237adaee894758b0e839f90928f6e3",
+            "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
+            "modified": 1692366526016,
+            "created": 1692366500303,
+            "url": "{{ _.base_url }}/sessions",
+            "name": "/sessions",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\": \"michel@mail.com\",\n\t\"password\": \"123456\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.3"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1692222641434.0625,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
             "_id": "env_d377ebaac88a40e7f2544c56d94d639e53364431",
             "parentId": "wrk_ab18cb1488ec402c9d0320e539c7d350",
-            "modified": 1692221282230,
+            "modified": 1692366625692,
             "created": 1692220600330,
             "name": "Base Environment",
             "data": {
                 "base_url": "localhost:3333",
-                "token_michel": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTIyMjEyNDksImV4cCI6MTY5MjMwNzY0OSwic3ViIjoiYWZlMjQyODYtOWFjZS00MGFhLWIzMTAtNGRjZWZiN2NmYjU5In0.Fyp5cXK_mqiJagjOH6EPwo7wEjcW_pe063k2UKCcwqo"
+                "token_michel": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTIzNjY1MjcsImV4cCI6MTY5MjQ1MjkyNywic3ViIjoiYWZlMjQyODYtOWFjZS00MGFhLWIzMTAtNGRjZWZiN2NmYjU5In0.wgguuK1FbN1wt8DAU9fqPpL5LyFKabIw9tInwvoe7o0"
             },
             "dataPropertyOrder": {
                 "&": [
