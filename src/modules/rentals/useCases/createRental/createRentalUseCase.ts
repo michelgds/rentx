@@ -29,7 +29,9 @@ class CreateRentalUseCase {
         car_id, 
         expected_return_date
     }: IRequest): Promise<Rental> {
-        const minimumHoursForRent = 24;
+        const dateNow = this.dateProvider.dateNow();
+        const daySubtract24Hours = dayjs().subtract(24, "hours").toDate();
+        const minimumHoursForRent = this.dateProvider.compareInHours(daySubtract24Hours, dateNow);        
 
         const carUnavailable = await this.rentalsRepository.findOpenRentalByCar(car_id);
 
@@ -42,8 +44,6 @@ class CreateRentalUseCase {
         if (rentalOpenToUser) {
             throw new AppError("There is a rental in progress for that user.");
         }
-
-        const dateNow = this.dateProvider.dateNow();
         
         const dateDiffInHours = this.dateProvider.compareInHours(dateNow, expected_return_date);
         
