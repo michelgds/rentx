@@ -21,7 +21,10 @@ describe("Create rental", () => {
             rentalsRepositoryInMemory, 
             dayjsDateProvider, 
             carsRepositoryInMemory
-        )
+        );
+        jest.spyOn(carsRepositoryInMemory, 'updateAvailable').mockResolvedValue(
+            Promise.resolve()
+        );
     });
 
     it("should be able to create a new rental", async () => {
